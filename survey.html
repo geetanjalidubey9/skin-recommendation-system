@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Skin Survey</title>
+	<style>
+		body{
+	background-color: #f4bcb9;              ;
+	
+
+		}
+		.container{
+			display: flex;
+			justify-content: center;
+
+		}
+		form {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			margin-top: 50px;
+			width: 400px;
+			/* border: 2px solid black; */
+background-color: white;
+/* opacity: 9; */
+			border-radius: 5px;
+			padding: 15px;
+		}
+		
+		input[type="text"], input[type="email"], input[type="password"], select {
+			padding: 10px;
+			margin: 10px;
+			border-radius: 5px;
+			border: 1px solid #ccc;
+			width: 300px;
+			background-color: aliceblue;
+			color: black;
+		
+		}
+		
+		input[type="submit"] {
+			background-color:  #f4bcb9 ;
+			color: white;
+			padding: 10px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			width: 200px;
+			margin-top: 20px;
+		}
+		
+		input[type="submit"]:hover {
+			background-color:rgb(189, 189, 194)   ;
+		}label{
+			font-weight: bold;
+			font-size: large;
+			font-family: "poppins",sans-serif;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+	<form>
+		<label for="name">Name:</label>
+		<input type="text" id="name" name="name" required>
+		
+		<label for="age">Age:</label>
+		<input type="text" id="age" name="age" required>
+		
+		<label for="gender">Gender:</label>
+		<select id="gender" name="gender">
+			<option value="male">Male</option>
+			<option value="female">Female</option>
+			<option value="other">Other</option>
+		</select>
+		
+		<label for="email">Email:</label>
+		<input type="email" id="email" name="email" required>
+		
+		<label for="skinType">Skin Type:</label>
+		<select id="skinType" name="skinType">
+			<option value="normal">Normal</option>
+			<option value="dry">Dry</option>
+			<option value="oily">Oily</option>
+			<option value="combination">Combination</option>
+			<option value="sensitive">Sensitive</option>
+		</select>
+		
+		<label for="skinConcerns">Skin Concerns:</label>
+		<textarea id="skinConcerns" name="skinConcerns" rows="4" cols="50"></textarea>
+		
+		<label for="password">Password:</label>
+		<input type="password" id="password" name="password" required>
+		
+		<input type="submit" value="Submit">
+	</form>
+	</div>
+
+	<script>
+		// Add event listener to form submission
+		document.querySelector('form').addEventListener('submit', (event) => {
+			// Prevent the form from submitting
+			event.preventDefault();
+			
+			// Get the form data
+			const name = document.querySelector('#name').value;
+			const age = document.querySelector('#age').value;
+			const gender = document.querySelector('#gender').value;
+			const email = document.querySelector('#email').value;
+			const skinType = document.querySelector('#skinType').value;
+			const skinConcerns = document.querySelector('#skinConcerns').value;
+			const password = document.querySelector('#password').value;
+			
+			// Do something with the form data, e.g. send it to a server
+			
+			// Clear the form
+			document.querySelector('form').reset();
+		});
+	</script>
+</body>
+</html>
